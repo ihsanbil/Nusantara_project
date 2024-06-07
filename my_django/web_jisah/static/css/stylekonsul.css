@@ -1,0 +1,164 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.nav-menu li {
+    margin-right: 20px; /* Menambah jarak antar item */
+}
+
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+
+.nav-menu a.login-button {
+    background-color: #007bff; /* Warna latar belakang untuk tombol */
+    color: #fff; /* Warna teks untuk tombol */
+    padding: 5px 15px; /* Padding di sekitar teks */
+    border-radius: 5px; /* Membuat sudut tombol menjadi bulat */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Menambahkan sedikit bayangan */
+    transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk warna latar dan teks */
+}
+
+.nav-menu a.login-button:hover {
+    background-color: #0056b3; /* Warna latar belakang saat di-hover */
+    color: #fff; /* Menjaga warna teks tetap putih saat di-hover */
+}
+
+.nav-menu a:hover {
+    color: #0056b3;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mengatur grid menjadi 3 kolom */
+    gap: 20px; /* Jarak antar item grid */
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #f9f9f9; /* Warna latar belakang kartu */
+    border: 1px solid #e0e0e0; /* Warna border kartu */
+    border-radius: 10px; /* Membulatkan sudut kartu */
+    padding: 15px;
+    text-align: center; /* Teks rata tengah */
+}
+
+.info-box {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+.profile-circle1,
+.profile-circle3,
+.profile-circle4 {
+    width: 100px; /* Ukuran bulatan */
+    height: 100px; /* Ukuran bulatan */
+    border-radius: 50%; /* Membuat bentuk bulat */
+    background-color: #cccccc; /* Warna latar belakang bulatan */
+    margin: 0 auto 20px; /* Posisi bulatan di tengah */
+}
+
+.grid-item button {
+    background-color: #4CAF50; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border */
+    padding: 10px 20px; /* Padding tombol */
+    text-align: center; /* Teks rata tengah */
+    text-decoration: none; /* Menghilangkan dekorasi teks */
+    display: inline-block; /* Tipe display */
+    font-size: 16px; /* Ukuran font */
+    margin: 4px 2px; /* Margin tombol */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+}
+.footer {
+    background-color: #34495e; /* Warna latar belakang gelap */
+    color: #ffffff; /* Warna teks */
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: #d1d1d1;
+}
+.footer-bottom {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20px;
+}
+.footer-bottom p {
+    margin: 0;
+}
+.social-icons a {
+    color: #ffffff; /* Warna ikon */
+    margin: 0 10px;
+    font-size: 24px; /* Ukuran ikon */
+}
+.social-icons a:hover {
+    color: #d1d1d1;
+}

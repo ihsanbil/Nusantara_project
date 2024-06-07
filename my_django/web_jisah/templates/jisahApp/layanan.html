@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>jisahApp</title>
+    <link rel="stylesheet" href="{% static 'css/stylelayanan.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="{% url 'index' %}">Beranda</a></li>
+            <li><a href="{% url 'layanan' %}">Layanan</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="{% url 'konsultasi' %}">Konsultasi Sekarang</a></li>
+            <li><a href="login.html" class="login-button">Login</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+        <div class="search-container">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+    </nav>
+
+    <div id="#home" class="header-text">
+        <h2>Layanan Konseling</h2>
+        <p>Pilih Fitur Menu yang kamu inginkan</p>
+    </div>
+
+    <div class="menu-container">
+        <a href="{% url 'paket' %}"><div class="menu-item chat">
+            <i class="fas fa-comments"></i>
+            <span>Live Chat</span>
+        </div></a>
+        <a href="{% url 'paket' %}"><div class="menu-item call">
+            <i class="fas fa-phone-alt"></i>
+            <span>Voice/Video Call</span>
+        </div></a>
+        <a href="{% url 'paket' %}"><div class="menu-item appointment">
+            <i class="fas fa-calendar-check"></i>
+            <span>Janji Tatap Muka</span>
+        </div></a>
+        <a href="{% url 'quiz_psikolog' %}"><div class="menu-item quiz">
+            <i class="fas fa-question-circle"></i>
+            <span>Quiz Psikolog</span>
+        </div></a>
+        <div class="menu-item event">
+            <i class="fas fa-calendar-week"></i>
+            <span>Event Webinar & Seminar</span>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>JISAH - Jiwa Sehat</h3>
+                <p>Menyediakan layanan konsultasi psikologi online untuk mendukung kesehatan mental Anda.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Layanan Kami</h3>
+                <ul>
+                    <li><a href="#">Konsultasi Online</a></li>
+                    <li><a href="#">Artikel Kesehatan Mental</a></li>
+                    <li><a href="#">Tes Psikologi</a></li>
+                    <li><a href="#">Webinar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hubungi Kami</h3>
+                <ul>
+                    <li><a href="mailto:support@jiwasehat-jisah.id">support@jiwasehat-jisah.id</a></li>
+                    <li><a href="#">+62 21 5555555</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/yourpage" class="fab fa-facebook-f"></a>
+                    <a href="https://www.instagram.com/yourpage" class="fab fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@yourpage" class="fab fa-tiktok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 NUSANTARA PROJECT - MSIB 6. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>

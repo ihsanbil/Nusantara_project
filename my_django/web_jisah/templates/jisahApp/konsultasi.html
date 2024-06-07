@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <title>jisahApp</title>
+        <link rel="stylesheet" href="{% static 'css/stylekonsul.css' %}">
+    </head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="{% url 'index' %}">Beranda</a></li>
+            <li><a href="{% url 'layanan' %}">Layanan</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="{% url 'konsultasi' %}">Konsultasi Sekarang</a></li>
+            <li><a href="login.html" class="login-button">Login</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+        <div class="search-container">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+    </nav>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="profile-circle1"></div>
+            <p>Almira Devina, M.Psi.,</p>
+            <p>Psikolog</p>
+            <p>Psikolog Klinis</p>
+            <button onclick="showDescription('psikolog1')">lihat selengkapnya</button>
+        </div>
+        <div class="grid-item">
+            <div class="profile-circle3"></div>
+            <p>Andini Damayanti M.Psi.,</p>
+            <p>Psikolog</p>
+            <p>Psikolog Klinis</p>
+            <button onclick="showDescription('psikolog2')">lihat selengkapnya</button>
+        </div>
+        <div class="grid-item">
+            <div class="profile-circle4"></div>
+            <p>Indira Tandiono, M.Psi.,</p>
+            <p>Konselor</p>
+            <p>Psikolog Klinis</p>
+            <button onclick="showDescription('psikolog3')">lihat selengkapnya</button>
+        </div>
+    </div>
+
+    <div class="psikolog-container">
+        <!-- Deskripsi Psikolog -->
+        <div id="psikolog-description"></div>
+    </div>
+      
+    <script>
+    // Deskripsi untuk setiap psikolog
+    var descriptions = {
+    psikolog1: '<div class="info-box"><p><strong>Durasi Konsultasi:</strong> 1 jam</p><p><strong>Harga:</strong> IDR 180,000</p><p><strong>Metode Konsultasi:</strong> Konsultasi daring di Jisah app</p><button onclick="buatJanji()">Buat Janji</button></div><h4>Deskripsi</h4><p>Hai sobat jisah, Salam kenal, saya Almira Devina, psikolog klinis. Saya memiliki pengalaman dalam menangani berbagai masalah psikologis seperti kecemasan, depresi, dan stres. Saya berusaha memberikan dukungan terbaik kepada klien untuk meningkatkan kesejahteraan mental mereka.</p><h4>Pembatalan Sesi</h4><p><i class="fas fa-phone"></i> (Nomor Telepon)</p><p><i class="fas fa-envelope"></i> (Alamat Email)</p>',
+    psikolog2: '<div class="info-box"><p><strong>Durasi Konsultasi:</strong> 1 jam</p><p><strong>Harga:</strong> IDR 200,000</p><p><strong>Metode Konsultasi:</strong> Konsultasi daring di Jisah app</p><button onclick="buatJanji()">Buat Janji</button></div><h4>Deskripsi</h4><p>Hai sobat jisah, Salam kenal, saya Andini Damayanti, seorang psikolog klinis dengan pengalaman dalam memberikan konseling untuk individu dan kelompok. Saya berkomitmen untuk membantu klien menemukan solusi untuk masalah mereka dan meningkatkan kualitas hidup.</p><h4>Pembatalan Sesi</h4><p><i class="fas fa-phone"></i> (Nomor Telepon)</p><p><i class="fas fa-envelope"></i> (Alamat Email)</p>',
+    psikolog3: '<div class="info-box"><p><strong>Durasi Konsultasi:</strong> 1 jam</p><p><strong>Harga:</strong> IDR 220,000</p><p><strong>Metode Konsultasi:</strong> Konsultasi daring di Jisah app</p><button onclick="buatJanji()">Buat Janji</button></div><h4>Deskripsi</h4><p>Hai sobat jisah, Salam kenal, saya Indira Tandiono, seorang konselor dengan pengalaman dalam membantu individu mengatasi masalah psikologis dan emosional. Saya menggunakan pendekatan terapi yang berpusat pada klien untuk membantu mereka mencapai perubahan yang positif dalam hidup mereka.</p><h4>Pembatalan Sesi</h4><p><i class="fas fa-phone"></i> (Nomor Telepon)</p><p><i class="fas fa-envelope"></i> (Alamat Email)</p>'
+};
+
+
+    // Fungsi untuk menampilkan deskripsi
+    function showDescription(psikologId) {
+        var description = descriptions[psikologId];
+        document.getElementById('psikolog-description').innerHTML = description;
+    }
+    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>JISAH - Jiwa Sehat</h3>
+                <p>Menyediakan layanan konsultasi psikologi online untuk mendukung kesehatan mental Anda.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Layanan Kami</h3>
+                <ul>
+                    <li><a href="#">Konsultasi Online</a></li>
+                    <li><a href="#">Artikel Kesehatan Mental</a></li>
+                    <li><a href="#">Tes Psikologi</a></li>
+                    <li><a href="#">Webinar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Hubungi Kami</h3>
+                <ul>
+                    <li><a href="mailto:support@jiwasehat-jisah.id">support@jiwasehat-jisah.id</a></li>
+                    <li><a href="#">+62 21 5555555</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/yourpage" class="fab fa-facebook-f"></a>
+                    <a href="https://www.instagram.com/yourpage" class="fab fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@yourpage" class="fab fa-tiktok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 NUSANTARA PROJECT - MSIB 6. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>

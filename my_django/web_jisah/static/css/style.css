@@ -1,0 +1,213 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+.nav-menu li {
+    margin-right: 20px; /* Menambah jarak antar item */
+}
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    transition: color 0.3s;
+}
+.nav-menu a.login-button {
+    background-color: #007bff; /* Warna latar belakang untuk tombol */
+    color: #fff; /* Warna teks untuk tombol */
+    padding: 5px 15px; /* Padding di sekitar teks */
+    border-radius: 5px; /* Membuat sudut tombol menjadi bulat */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Menambahkan sedikit bayangan */
+    transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi untuk warna latar dan teks */
+}
+
+.nav-menu a.login-button:hover {
+    background-color: #0056b3; /* Warna latar belakang saat di-hover */
+    color: #fff; /* Menjaga warna teks tetap putih saat di-hover */
+}
+.nav-menu a:hover {
+    color: #0056b3;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-icon {
+    color: #007bff;
+    cursor: pointer;
+}
+
+
+
+
+.condition-box {
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid #007bff;
+    border-radius: 50%; /* Membuat bentuk kotak menjadi bulat */
+    width: 100px; /* Lebar kotak */
+    height: 100px; /* Tinggi kotak */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 32px;
+    animation: jump 0.5s infinite alternate; /* Animasi loncat-loncat */
+}
+
+.condition-box:hover, .condition-box.active {
+    background-color: #e9f5ff;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Tidak ada perubahan posisi pada awal animasi */
+    }
+    50% {
+        transform: translateY(-10px); /* Loncat ke atas setengah jarak */
+    }
+    100% {
+        transform: translateY(0); /* Kembali ke posisi awal */
+    }
+}
+
+
+.description {
+    display: none;
+    margin-top: 20px;
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.header-text h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color:#007bff;
+    margin-top: 30px;
+}
+
+.header-text p {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color:#000000;
+    margin-bottom: 60px;
+}
+
+.artikel {
+    font-weight: normal;
+    text-align: center;
+    margin-top: 150px;
+    color: #0056b3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mengatur grid menjadi 3 kolom */
+    gap: 20px; /* Jarak antar item grid */
+    padding: 20px;
+}
+
+article {
+    background-color: #f9f9f9; /* Warna latar belakang artikel */
+    border: 1px solid #e0e0e0; /* Warna border artikel */
+    border-radius: 10px; /* Membulatkan sudut artikel */
+    padding: 15px;
+    text-align: center; /* Teks rata tengah */
+}
+
+article img {
+    max-width: 100%; /* Gambar tidak melebihi lebar artikel */
+    border-radius: 10px; /* Membulatkan sudut gambar */
+}
+
+.read-more {
+    background-color: transparent; /* Background transparan */
+    color: #0056b3; /* Warna teks */
+    border: 2px solid #0056b3; /* Border solid biru */
+    padding: 10px 20px; /* Padding tombol */
+    text-align: center; /* Teks rata tengah */
+    text-decoration: none; /* Menghilangkan dekorasi teks */
+    display: inline-block; /* Tipe display */
+    font-size: 16px; /* Ukuran font */
+    margin-top: 10px; /* Margin atas */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    transition: background-color 0.3s, color 0.3s; /* Transisi hover */
+}
+
+.read-more:hover {
+    background-color: #0056b3; /* Background biru saat hover */
+    color: #fff; /* Warna teks putih saat hover */
+}
+
+.footer {
+    background-color: #34495e; /* Warna latar belakang gelap */
+    color: #ffffff; /* Warna teks */
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: #d1d1d1;
+}
+.footer-bottom {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20px;
+}
+.footer-bottom p {
+    margin: 0;
+}
+.social-icons a {
+    color: #ffffff; /* Warna ikon */
+    margin: 0 10px;
+    font-size: 24px; /* Ukuran ikon */
+}
+.social-icons a:hover {
+    color: #d1d1d1;
+}

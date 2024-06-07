@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>jisahApp</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="{% url 'index' %}">Beranda</a></li>
+            <li><a href="{% url 'layanan' %}">Layanan</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="{% url 'konsultasi' %}">Konsultasi Sekarang</a></li>
+            <li><a href="login.html" class="login-button">Login</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+        <div class="search-container">
+            <span class="search-icon"><i class="fas fa-search"></i></span>
+        </div>
+    </nav>
+    
+    
+
+    <!-- Teks header -->
+<div id="#home" class="header-text">
+    <h2>Harimu berat ya?</h2>
+    <p>Yuk, kenali keadaanmu sekarang.</p>
+</div>
+
+<!-- Kotak-kotak gangguan mental -->
+<div class="condition-box" onclick="showDescription('anxiety')">Gangguan Kecemasan</div>
+<div class="condition-box" onclick="showDescription('depression')">Depresi</div>
+<div class="condition-box" onclick="showDescription('bipolar')">Gangguan Bipolar</div>
+<div class="condition-box" onclick="showDescription('schizophrenia')">Skizofrenia</div>
+<div class="condition-box" onclick="showDescription('eating')">Gangguan Makan</div>
+<div class="condition-box" onclick="showDescription('ptsd')">Gangguan Stres Pasca-trauma (PTSD)</div>
+<div class="condition-box" onclick="showDescription('personality')">Gangguan Kepribadian</div>
+<div class="condition-box" onclick="showDescription('behavior')">Gangguan Perilaku</div>
+<div class="condition-box" onclick="showDescription('ocd')">Gangguan Obsesif-Kompulsif (OCD)</div>
+<div class="condition-box" onclick="showDescription('addiction')">Gangguan Kecanduan</div>
+<div class="condition-box" onclick="showDescription('social')">Gangguan Kecemasan Sosial</div>
+<div class="condition-box" onclick="showDescription('somatoform')">Gangguan Somatoform</div>
+<div class="condition-box" onclick="showDescription('autism')">Gangguan Spektrum Autisme</div>
+<div class="condition-box" onclick="showDescription('psychotic')">Gangguan Psikotik</div>
+
+<!-- Deskripsi gangguan mental -->
+<div id="anxiety" class="description">
+    Gangguan kecemasan adalah kondisi mental yang ditandai dengan rasa takut dan kecemasan berlebih yang berlangsung lama dan sulit dikendalikan.
+</div>
+<div id="depression" class="description">
+    Depresi adalah kondisi yang ditandai oleh perasaan sedih yang berkepanjangan, hilangnya minat atau kesenangan dalam aktivitas, perubahan berat badan atau pola makan, serta gangguan tidur dan perasaan putus asa.
+</div>
+<div id="bipolar" class="description">
+    Gangguan suasana hati dengan perubahan drastis antara episode manik (tingkat energi yang tinggi) dan episode depresi (tingkat energi yang rendah).
+</div>
+<div id="schizophrenia" class="description">
+    Skizofrenia adalah gangguan mental serius yang memengaruhi cara berpikir, merasa, dan berperilaku, seringkali dengan gejala seperti halusinasi dan delusi.
+</div>
+<div id="eating" class="description">
+    Gangguan makan melibatkan pola makan yang tidak sehat, seperti anoreksia nervosa, bulimia nervosa, atau gangguan makan kompulsif.
+</div>
+<div id="ptsd" class="description">
+    PTSD timbul setelah mengalami atau menyaksikan peristiwa traumatis, dengan gejala seperti kilas balik, mimpi buruk, kecemasan, dan reaksi emosional yang kuat.
+</div>
+<div id="personality" class="description">
+    Gangguan kepribadian melibatkan pola pikir, emosi, dan perilaku yang tidak sehat atau tidak biasa.
+</div>
+<div id="behavior" class="description">
+    Gangguan perilaku mencakup pola perilaku yang menyimpang dari norma sosial.
+</div>
+<div id="ocd" class="description">
+    OCD adalah gangguan mental yang ditandai oleh obsesi yang menghasilkan kecemasan dan kompulsi untuk melakukan tindakan tertentu secara berulang-ulang.
+</div>
+<div id="addiction" class="description">
+    Gangguan kecanduan melibatkan kebiasaan tidak terkendali untuk menggunakan substansi tertentu atau terlibat dalam aktivitas tertentu meskipun dampak negatifnya.
+</div>
+<div id="social" class="description">
+    Gangguan kecemasan sosial menyebabkan ketakutan yang berlebihan terhadap situasi sosial atau kinerja di depan orang lain.
+</div>
+<div id="somatoform" class="description">
+    Gangguan somatoform melibatkan gejala fisik yang tidak dapat dijelaskan secara medis.
+</div>
+<div id="autism" class="description">
+    Gangguan autisme menyebabkan kesulitan dalam berkomunikasi dan berinteraksi sosial.
+</div>
+<div id="psychotic" class="description">
+    Gangguan psikotik menyebabkan hilangnya kontak dengan realitas, seperti halusinasi, delusi, atau pikiran yang terganggu.
+</div>
+
+<div id="artikel" class="artikel">
+    <h2>Artikel</h2>
+</div>
+
+<div class="container">
+    <main class="grid">
+        <article>
+            <img src="{% static 'img/1.jpg' %}" width="300px" height="300px">
+            <div class="konten"></div>
+            <p>5 permasalahan psikologi yang kerap dialami remaja sekarang di era 
+               globalisasi ini</p>
+            <a href="#"><button class="read-more">baca selengkapnya</button></a>
+        </article>
+        <article>
+            <img src="{% static 'img/3.jpeg' %}" width="300px" height="300px">
+            <div class="konten"></div>
+            <p>Nestapa Mahasiswa Jurusan Psikologi Pengidap Anxiety Disorder, 
+               Berat Jalani Studi tapi Terselamatkan</p>
+            <a href="#"><button class="read-more">baca selengkapnya</button></a>
+        </article>
+        <article>
+            <img src="{% static 'img/4.jpg' %}" width="300px" height="300px">
+            <div class="konten"></div>
+            <p>Phobia Adalah Jenis Gangguan Kecemasan, Pahami Penyebab, Gejala, dan Cara Mengatasinya</p>
+            <a href="#"><button class="read-more">baca selengkapnya</button></a>
+        </article>
+    </main>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>JISAH - Jiwa Sehat</h3>
+            <p>Menyediakan layanan konsultasi psikologi online untuk mendukung kesehatan mental Anda.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Layanan Kami</h3>
+            <ul>
+                <li><a href="#">Konsultasi Online</a></li>
+                <li><a href="#">Artikel Kesehatan Mental</a></li>
+                <li><a href="#">Tes Psikologi</a></li>
+                <li><a href="#">Webinar</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Hubungi Kami</h3>
+            <ul>
+                <li><a href="mailto:support@jiwasehat-jisah.id">support@jiwasehat-jisah.id</a></li>
+                <li><a href="#">+62 21 5555555</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Ikuti Kami</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/yourpage" class="fab fa-instagram"></a>
+                <a href="https://www.tiktok.com/@yourpage" class="fab fa-tiktok"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 NUSANTARA PROJECT - MSIB 6. Semua hak dilindungi.</p>
+    </div>
+</footer>
+
+<script>
+    function showDescription(conditionId) {
+        // Sembunyikan semua deskripsi dan hapus kelas 'active'
+        var descriptions = document.getElementsByClassName('description');
+        var boxes = document.getElementsByClassName('condition-box');
+        for (var i = 0; i < descriptions.length; i++) {
+            descriptions[i].style.display = 'none';
+            boxes[i].classList.remove('active');
+        }
+
+        // Tampilkan deskripsi yang sesuai dengan kotak yang dipilih dan tambahkan kelas 'active'
+        var description = document.getElementById(conditionId);
+        var box = document.querySelector('.condition-box[onclick="showDescription(\'' + conditionId + '\')"]');
+        if (description && box) {
+            description.style.display = 'block';
+            box.classList.add('active');
+        }
+    }
+</script>
+
+</body>
+</html>
